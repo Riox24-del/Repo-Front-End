@@ -1,0 +1,7 @@
+{
+  "name": "proyectoGPDS",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
