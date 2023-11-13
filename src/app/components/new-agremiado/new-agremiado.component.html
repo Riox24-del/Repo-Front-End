@@ -1,0 +1,130 @@
+<ion-content>
+  <ion-header>
+    <ion-toolbar>
+
+      <ion-text class="ion-text-center" color="dark">
+        <h3>Nuevo Agremiado </h3>
+      </ion-text>
+
+      <ion-buttons slot="end">
+        <ion-button (click)="close()" fill="clear">
+          <ion-icon  slot="icon-only" name="close"></ion-icon>
+         </ion-button>
+      </ion-buttons>
+
+    </ion-toolbar>
+
+
+  </ion-header>
+
+  <ion-grid fixed>
+    <form  >
+    <ion-row>
+      <ion-col size="4">
+        <ion-label >Apellido Paterno</ion-label>
+       <ion-input
+          fill="outline"></ion-input>
+          <!-- <small 
+          style="color: red;">
+            El nombre es obligatorio </small> -->
+      </ion-col>
+
+      <ion-col size="4">
+        <ion-label >Apellido Materno</ion-label>
+       <ion-input
+          fill="outline"></ion-input>
+         
+      </ion-col>
+      
+      <ion-col size="4">
+        <ion-label >Nombre</ion-label>
+       <ion-input
+          fill="outline"></ion-input>
+         
+      </ion-col>
+
+    </ion-row>
+
+   
+    <ion-row>
+      <ion-col size="6">
+        <ion-label >NUP:</ion-label>
+       <ion-input
+          fill="outline"></ion-input>
+         
+      </ion-col>
+      <ion-col size="6">
+        <ion-label >NUE:</ion-label>
+       <ion-input
+          fill="outline"></ion-input>
+         
+      </ion-col>
+    </ion-row>
+       
+    <ion-row>
+      <ion-col size="6">
+        <ion-label >RFC:</ion-label>
+       <ion-input
+          fill="outline"></ion-input>
+         
+      </ion-col>
+      <ion-col size="6">
+        <ion-label >NSS:</ion-label>
+       <ion-input
+          fill="outline"></ion-input>
+         
+      </ion-col>
+    </ion-row>
+     
+     
+    <ion-row>
+      <ion-col size="6">
+        <ion-label >Fecha de nacimiento:</ion-label>
+       <ion-input
+       type="date"
+          fill="outline"></ion-input>
+         
+      </ion-col>
+      <ion-col size="6">
+        <ion-label >Telefono:</ion-label>
+       <ion-input
+          fill="outline"></ion-input>
+         
+      </ion-col>
+    </ion-row>
+  
+ 
+    <ion-row>
+      <ion-col size="6">
+        <ion-label >Cuota pagada:</ion-label>
+        <ion-select>
+          <ion-select-option value="opcion1">Si</ion-select-option>
+          <ion-select-option value="opcion2">No</ion-select-option>
+         
+        </ion-select>
+      </ion-col>
+      <ion-col size="6">
+        <ion-label >Genero:</ion-label>
+        <ion-select>
+          <ion-select-option value="opcion1">Hombre</ion-select-option>
+          <ion-select-option value="opcion2">Mujer</ion-select-option>
+        </ion-select>
+         
+      </ion-col>
+    </ion-row>
+  
+
+
+    <ion-button  class="button-container" type="submit" expand="block" class="rounded-button">
+Agregar agremiado
+    </ion-button>
+    
+    
+    
+
+  </form>
+  </ion-grid>
+
+
+
+</ion-content>

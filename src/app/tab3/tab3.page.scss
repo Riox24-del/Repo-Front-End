@@ -1,0 +1,27 @@
+/* Estilos para el encabezado de la tabla */
+.table-header {
+    background-color: #007bff; /* Color de fondo del encabezado */
+    color: #fff; /* Color de texto del encabezado */
+    font-weight: bold; /* Texto en negrita */
+    padding: 10px; /* Espaciado interior */
+  }
+  
+  /* Estilos para las filas de la tabla */
+  .table-row {
+    border-bottom: 1px solid #ccc; /* Línea separadora entre filas */
+    padding: 10px; /* Espaciado interior */
+  }
+  
+  /* Estilos para el botón Descargar */
+  ion-button {
+    --color: #007bff; /* Color del botón */
+    font-size: 14px; /* Tamaño de fuente del botón */
+  }
+  
+  .asuuu {
+    --color: #007bff;
+    color: #fff; /* Color del texto en blanco */
+    display: inline-block;
+    width: 100%;
+  }
+  

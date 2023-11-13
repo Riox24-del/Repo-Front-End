@@ -1,0 +1,51 @@
+/* Estilos para el encabezado de la tabla */
+ion-row:first-child {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Estilos para las filas de la tabla */
+  ion-row:not(:first-child) {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Estilos para las columnas */
+  ion-col {
+    padding: 10px;
+  }
+  
+  /* Estilos para el botón Editar */
+  ion-button {
+    font-size: 14px;
+    padding: 5px 10px;
+    margin-right: 5px;
+  }
+  
+  /* Estilos para el botón Eliminar */
+  ion-button[color="danger"] {
+    font-size: 14px;
+    padding: 5px 10px;
+    background-color: #ff5555;
+    color: #fff;
+  }
+  
+  /* Alinear el texto en el botón Eliminar al centro */
+  ion-button[color="danger"] span {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .batipuchungito{
+    background-color: #000000;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  
+//   /* Estilos para el botón Eliminar en el hover */
+//   ion-button[color="danger"]:hover {
+//     background-color: #ff3333;
+//   }
+  
