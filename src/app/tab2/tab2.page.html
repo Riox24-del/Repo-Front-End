@@ -9,15 +9,14 @@
 
 </ion-col>
   <ion-col size="6" class="batipuchungito">
-    <ion-button class="asuuu">Imprimir lista</ion-button>
+    <ion-button class="asuuu" (click)="generatePDF()">Imprimir lista</ion-button>
   </ion-col>
  </ion-row>
   </ion-grid>
  
-  <ion-grid>
+  <ion-grid class="table-container">
     <ion-row>
-      <ion-col size="1">Apellido Paterno</ion-col>
-      <ion-col size="1">Apellido Materno</ion-col>
+      <ion-col size="1">Apellidos</ion-col>
       <ion-col size="1">Nombre</ion-col>
       <ion-col size="0.5">Sexo</ion-col>
       <ion-col size="1">NUP</ion-col>
@@ -30,24 +29,22 @@
       <ion-col size="1">Acciones</ion-col>
     </ion-row>
 
-    <!-- Ejemplo de datos en la tabla (puedes agregar más filas según sea necesario) -->
-    <ion-row>
-      <ion-col size="1">Apellido1</ion-col>
-      <ion-col size="1">Apellido2</ion-col>
-      <ion-col size="1">Nombre1</ion-col>
-      <ion-col size="0.5">M</ion-col>
-      <ion-col size="1">NUP123</ion-col>
-      <ion-col size="1">NUE456</ion-col>
-      <ion-col size="1">RFC789</ion-col>
-      <ion-col size="1">NSS101</ion-col>
-      <ion-col size="1">01/01/1990</ion-col>
-      <ion-col size="1">1234567890</ion-col>
-      <ion-col size="1">Si</ion-col>
+  
+    <ion-row *ngFor="let a of agremiados" class="table-row">
+      <ion-col size="1">{{a.apellidos}}</ion-col>
+      <ion-col size="1">{{a.nombre}}</ion-col>
+      <ion-col size="0.5">{{a.sexo}}</ion-col>
+      <ion-col size="1">{{a.NUP}}</ion-col>
+      <ion-col size="1">{{a.NUE}}</ion-col>
+      <ion-col size="1">{{a.RFC}}</ion-col>
+      <ion-col size="1">{{a.NSS}}</ion-col>
+      <ion-col size="1">{{a.f_nacimiento}}</ion-col>
+      <ion-col size="1">{{a.telefono}}</ion-col>
+      <ion-col size="1">{{a.cuota}}</ion-col>
       <ion-col size="1">
-        <ion-button (click)="openEditAgremiado()">Editar</ion-button>
-       
-        <ion-button color="danger" (click)="confirmarEliminacion()">Eliminar 
-           </ion-button>
+        <ion-button (click)="openEditAgremiado(a.id)">Editar</ion-button>
+        <ion-button color="danger" (click)="confirmarEliminacion(a.id)">Eliminar</ion-button>
+
       </ion-col>
     </ion-row>
   </ion-grid>

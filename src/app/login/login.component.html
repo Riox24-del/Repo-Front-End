@@ -1,0 +1,30 @@
+<ion-content class="ion-padding" [fullscreen]="true">
+  <ion-grid class="ion-no-padding" style="height: 100%;">
+    <ion-row class="ion-align-items-center ion-justify-content-center" style="height: 100%;">
+      <ion-col size="12" class="ion-text-center">
+        <ion-img class="login-logo" src="https://iconape.com/wp-content/png_logo_vector/pitico-oaxaca-logo.png" alt="Logo"></ion-img>
+      </ion-col>
+
+      <ion-col size="12" class="ion-text-center">
+        <h1 class="login-title">¡Bienvenido Miado!</h1>
+        <p class="login-subtitle">Inicia sesión para continuar</p>
+      </ion-col>
+
+      <ion-col size="12" class="ion-text-center">
+        <!-- Usa [formGroup] y [formControlName] para vincular los campos del formulario -->
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()" class="login-form">
+          <ion-item lines="none" class="login-input">
+            <ion-input type="text" formControlName="username" placeholder="Usuario"></ion-input>
+          </ion-item>
+
+          <ion-item lines="none" class="login-input">
+            <ion-input type="password" formControlName="password" placeholder="Contraseña"></ion-input>
+          </ion-item>
+
+          <!-- Desactiva el botón si el formulario no es válido -->
+          <ion-button type="submit" expand="full" class="login-button" [disabled]="!formValid()">Iniciar sesión</ion-button>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

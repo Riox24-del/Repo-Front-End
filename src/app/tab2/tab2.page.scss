@@ -49,3 +49,16 @@ ion-row:first-child {
 //     background-color: #ff3333;
 //   }
   
+
+
+.table-container {
+  width: 100%; /* Puedes ajustar el ancho de la tabla según tus necesidades */
+}
+
+.table-row {
+  /* Estilos para las filas de la tabla */
+  border: 1px solid #ddd; /* Borde para separar las filas */
+  margin-bottom: 5px; /* Espacio entre las filas */
+}
+
+/* Puedes añadir más estilos según sea necesario */

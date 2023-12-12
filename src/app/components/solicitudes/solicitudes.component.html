@@ -1,0 +1,53 @@
+<ion-content>
+  
+  <ion-grid fixed class="form-grid">
+    <form (ngSubmit)="onSubmit()" class="form-container">
+      <ion-row class="form-row">
+        <ion-item class="form-col">
+          <ion-label class="form-label" position="stacked">NUE</ion-label>
+          <ion-input class="form-input" [(ngModel)]="nue" name="nue" type="text" required></ion-input>
+        </ion-item>
+      </ion-row>
+    
+      <ion-row class="form-row">
+        <ion-item class="form-col">
+          <ion-label class="form-label" position="stacked">Archivo</ion-label>
+          <input class="form-input" type="file" (change)="onArchivoChange($event)" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" required />
+        </ion-item>
+      </ion-row>
+    
+      <div class="button-container">
+        <ion-button class="rounded-button" type="submit" expand="full">Enviar Solicitud</ion-button>
+      </div>
+    </form>
+    
+  </ion-grid>
+  
+  <ion-grid fixed class="form-grid">
+    <ion-row class="profile-container">
+      <ion-col size="12">
+        <div class="profile-header">
+          <ion-avatar>
+            <img src="https://th.bing.com/th/id/OIP.X_BPzJlrAzRMP-P1MJcBAgAAAA?rs=1&pid=ImgDetMain" alt="Foto de perfil" />
+          </ion-avatar>
+        </div>
+        <div class="profile-details">
+          <h3>Nombre:{{ agremiadoData.nombre }}</h3>
+          <p>Apellidos:{{ agremiadoData.apellidos }}</p>
+          <p>Sexo:{{ agremiadoData.sexo }}</p>
+          <p>NUP:{{ agremiadoData.NUP }}</p>
+          <p>NUE:{{ agremiadoData.NUE }}</p>
+          <p>RFC:{{ agremiadoData.RFC }}</p>
+          <p>NSS:{{ agremiadoData.NSS }}</p>
+          <p>Telefono:{{ agremiadoData.telefono }}</p>
+          <p>Fecha de nacimiento:{{ agremiadoData.f_nacimiento }}</p>
+          <p>Cuota:{{ agremiadoData.cuota }}</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <ion-button (click)="logout()" color="danger" expand="block" class="rounded-button">
+    Salir
+  </ion-button>
+</ion-content>

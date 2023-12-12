@@ -18,27 +18,22 @@
   </ion-header>
 
   <ion-grid fixed>
-    <form  >
+    <form  [formGroup]="formProduct"  (ngSubmit)="submit()" >
     <ion-row>
-      <ion-col size="4">
-        <ion-label >Apellido Paterno</ion-label>
-       <ion-input
-          fill="outline"></ion-input>
-          <!-- <small 
-          style="color: red;">
-            El nombre es obligatorio </small> -->
-      </ion-col>
+    
 
-      <ion-col size="4">
-        <ion-label >Apellido Materno</ion-label>
+      <ion-col size="6">
+        <ion-label >Apellidos</ion-label>
        <ion-input
+       formControlName="apellidos"
           fill="outline"></ion-input>
          
       </ion-col>
       
-      <ion-col size="4">
+      <ion-col size="6">
         <ion-label >Nombre</ion-label>
        <ion-input
+       formControlName="nombre"
           fill="outline"></ion-input>
          
       </ion-col>
@@ -50,12 +45,14 @@
       <ion-col size="6">
         <ion-label >NUP:</ion-label>
        <ion-input
+       formControlName="NUP"
           fill="outline"></ion-input>
          
       </ion-col>
       <ion-col size="6">
         <ion-label >NUE:</ion-label>
        <ion-input
+       formControlName="NUE"
           fill="outline"></ion-input>
          
       </ion-col>
@@ -65,12 +62,14 @@
       <ion-col size="6">
         <ion-label >RFC:</ion-label>
        <ion-input
+       formControlName="RFC"
           fill="outline"></ion-input>
          
       </ion-col>
       <ion-col size="6">
         <ion-label >NSS:</ion-label>
        <ion-input
+       formControlName="NSS"
           fill="outline"></ion-input>
          
       </ion-col>
@@ -82,12 +81,14 @@
         <ion-label >Fecha de nacimiento:</ion-label>
        <ion-input
        type="date"
+       formControlName="f_nacimiento"
           fill="outline"></ion-input>
          
       </ion-col>
       <ion-col size="6">
         <ion-label >Telefono:</ion-label>
        <ion-input
+       formControlName="telefono"
           fill="outline"></ion-input>
          
       </ion-col>
@@ -96,20 +97,12 @@
  
     <ion-row>
       <ion-col size="6">
-        <ion-label >Cuota pagada:</ion-label>
-        <ion-select>
-          <ion-select-option value="opcion1">Si</ion-select-option>
-          <ion-select-option value="opcion2">No</ion-select-option>
-         
-        </ion-select>
+        <ion-label >Cuota</ion-label>
+       <ion-input formControlName="cuota"></ion-input>
       </ion-col>
       <ion-col size="6">
         <ion-label >Genero:</ion-label>
-        <ion-select>
-          <ion-select-option value="opcion1">Hombre</ion-select-option>
-          <ion-select-option value="opcion2">Mujer</ion-select-option>
-        </ion-select>
-         
+         <ion-input  formControlName="sexo"></ion-input>
       </ion-col>
     </ion-row>
   

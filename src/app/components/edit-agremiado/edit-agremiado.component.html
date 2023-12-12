@@ -1,67 +1,42 @@
-<ion-content>
+<ion-content >
   <ion-header>
     <ion-toolbar>
 
       <ion-text class="ion-text-center" color="dark">
-        <h3>Editar Agremiado </h3>
+        <h3>Editar Agremiado</h3>
       </ion-text>
 
       <ion-buttons slot="end">
         <ion-button (click)="close()" fill="clear">
-          <ion-icon  slot="icon-only" name="close"></ion-icon>
-         </ion-button>
+          <ion-icon slot="icon-only" name="close"></ion-icon>
+        </ion-button>
       </ion-buttons>
 
     </ion-toolbar>
-
-
   </ion-header>
 
   <ion-grid fixed>
-    <form  >
+    <form [formGroup]="formGroup" (ngSubmit)="submit()">
 
-    <ion-row>
-      <ion-col size="4">
-        <ion-label >Apellido Paterno</ion-label>
-       <ion-input
-          fill="outline"></ion-input>
-          <!-- <small 
-          style="color: red;">
-            El nombre es obligatorio </small> -->
-      </ion-col>
-    </ion-row>
+      <ion-row>
+        <ion-col size="4">
+          <ion-label>Apellidos</ion-label>
+          <ion-input formControlName="apellidos" fill="outline"></ion-input>
+        </ion-col>
+      </ion-row>
 
-   <ion-row>
-    <ion-col size="4">
-      <ion-label >Apellido Materno</ion-label>
-     <ion-input
-        fill="outline"></ion-input>
-       
-    </ion-col>
-   </ion-row>
-
-   <ion-row>
-    
-    <ion-col size="4">
-      <ion-label >Nombre</ion-label>
-     <ion-input
-        fill="outline"></ion-input>
-       
-    </ion-col>
-   </ion-row>
-
-  
+      <ion-row>
+        <ion-col size="4">
+          <ion-label>Nombre</ion-label>
+          <ion-input formControlName="nombre" fill="outline"></ion-input>
+        </ion-col>
+      </ion-row>
 
 
-    <ion-button  class="button-container" type="submit" expand="block" class="rounded-button">
-    Guardar cambios    </ion-button>
-    
-    
-    
+      <ion-button class="button-container" type="submit" expand="block" class="rounded-button">
+        Guardar cambios
+      </ion-button>
 
-  </form>
+    </form>
   </ion-grid>
-
-
-
 </ion-content>
